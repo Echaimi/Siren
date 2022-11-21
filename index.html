@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Siren-Esgi</title>
+		<script type="module" src="/main.js"></script>
+	</head>
+	<body>
+	<header>
+		<div id="app_menu" class="app_menu">
+			<img id="close_menu" src="./Icon_close_icon.svg" alt="close burger menu" />
+			<nav class="nav_header" >
+				<ul class="navlist" id="app_navigation_list">
+					<li class="navlink" id="navlink" data-link="verify-siren">
+						Check a siren number
+					</li>
+					<li class="navlink" id="navlink" data-link="generate-siren">
+						Generate a siren number					</li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+		<main id="app_content" class="app_content">
+			<img id="icon_menu" class="menuIcon" src="./menu.svg" alt="menu"/>
+			<section data-page="verify-siren" class="verify-siren" id="page">
+				<div class="wrapper">
+					<h2>Verify a siren number</h2>
+					<form id="verify_siren_form" class="sirenForm">
+						<label for="siren">Enter a siren number</label>
+						<input type="number" name="siren" id="siren" />
+						<p class="error" id="verify_siren_form_error"></p>
+						<button type="submit">verify</button>
+					</form>
+					<div id="verify_siren_message"></div>
+				</div>
+			</section>
+			<section data-page="generate-siren" class="generateSiren" id="page">
+				<div class="wrapper">
+					<h2>Randomly generate the last digit of my siren number</h2>
+					<form id="generate_siren_form" class="sirenForm">
+						<label for="base_siren"
+							>Fill in the first 8 digits</label
+						>
+						<input type="number" name="baseSiren" id="base_siren" />
+						<p class="error" id="generate_siren_form_error"></p>
+						<button type="submit">Générer</button>
+					</form>
+					<div id="display_base_siren" class="displaySiren"></div>
+				</div>
+				<div class="wrapper">
+					<h2>Randomly generate my siren number</h2>
+					<button id="generate_siren_button">generate</button>
+					<div id="display_siren" class="displaySiren"></div>
+				</div>
+			</section>
+		</main>
+	</body>
+</html>
